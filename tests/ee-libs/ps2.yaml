@@ -1,0 +1,41 @@
+project: ee-libs
+
+targets:
+  - name: ee-libs
+    type: ee
+    sources:
+      - src/main.c
+    libs:
+      - ahx
+      - cdvd
+      - debug
+      - dma
+      - draw
+      - eedebug
+      - elf-loader-nocolour
+      - elf-loader2
+      - erl
+      - filexio
+      - font
+      - graph
+      - iopreboot
+      - ioprpgen
+      - kbd
+      - kernel
+      - math3d
+      - mc
+      - mouse
+      - mpeg
+      - mtap
+      - netman
+      - packet2
+      - packet
+      - pad
+      - poweroff
+      - ps2cam
+      - ps2ip
+      - ps2snd
+      - rm
+      - secr
+      - sior
+      - patches

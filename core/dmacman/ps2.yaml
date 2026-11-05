@@ -1,0 +1,16 @@
+project: dmacman
+
+targets:
+  - name: dmacman
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/dmacman.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../sysmem/include
+      - src

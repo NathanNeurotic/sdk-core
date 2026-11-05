@@ -1,0 +1,20 @@
+project: mcserv-old
+
+targets:
+  - name: mcserv-old
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../mcserv/src/mcserv.c
+    imports_lst: ../mcserv/src/imports.lst
+    exports_tab: ../mcserv/src/exports.tab
+    include_dirs:
+      - ../mcserv/src
+      - ../loadcore/include
+      - ../intrman/include
+      - ../sysclib/include
+      - ../sifman/include
+      - ../sifcmd/include
+      - ../threadman/include
+      - ../stdio/include
+      - ../mcman/include

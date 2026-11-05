@@ -1,0 +1,26 @@
+project: libcglue
+
+targets:
+  - name: cglue
+    type: ee_lib
+    sources:
+      - src/rtc.c
+      - src/timezone.c
+      - src/sjis.c
+      - src/sleep.c
+      - src/cwd.c
+      - src/fs.c
+      - src/api.c
+      - src/fdman.c
+      - src/init.c
+      - src/lock.c
+      - src/ps2sdkapi.c
+      - src/glue.c
+      - src/socket.c
+      - src/netdb.c
+      - src/select.c
+    cflags:
+      - -ffunction-sections
+    include_dirs:
+      - include
+    headers: [kernel]

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_rmman core/rmman
+ * @brief RMMAN definitions
+ */

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_rm core/rm
+ * @brief @brief RPC Interface for PS2 Remote Control Driver (RMMAN)
+ */

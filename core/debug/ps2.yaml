@@ -1,0 +1,15 @@
+project: debug
+
+targets:
+  - name: debug
+    type: ee_lib
+    sources:
+      - src/scr_printf.c
+      - src/font.c
+      - src/screenshot.c
+      - src/callstack.c
+      - src/callstackget.S
+      - src/hwbp.S
+    include_dirs:
+      - include
+    headers: [kernel]

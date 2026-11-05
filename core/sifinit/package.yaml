@@ -1,0 +1,10 @@
+name: sifinit
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    headers: [loadcore,sifman,stdio]
+    irx: bin/sifinit.irx

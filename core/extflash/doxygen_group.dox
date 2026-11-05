@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_extflash core/extflash
+ * @brief Expansion bay flash driver. Supported in ROM in SCPH-5xxxx models and integrated in DESR-xxxx models.
+ */

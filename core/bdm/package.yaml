@@ -1,0 +1,15 @@
+name: bdm
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [loadcore,stdio,sysclib,sysmem,threadman]
+    irx: bin/bdm.irx
+  - kind: library
+    target: [iop]
+    include_dirs: [include, src/libbdm/include]
+    lib: lib/libbdm.a

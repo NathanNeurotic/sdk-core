@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_ssbusc core/ssbusc
+ * @brief SSBUSC service control function definitions.
+ */

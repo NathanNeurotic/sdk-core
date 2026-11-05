@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_mouse core/mouse
+ * @brief USB Mouse Driver for PS2
+ */

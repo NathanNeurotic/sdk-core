@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_mc core/mc
+ * @brief Macros, structures & function prototypes for mclib.
+ */

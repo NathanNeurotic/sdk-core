@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_timrman core/timrman
+ * @brief Timer manager.
+ */

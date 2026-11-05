@@ -1,0 +1,1 @@
+thread_local variables need the LLVM toolchain: the GCC toolchain has no thread-local storage support on the R5900.

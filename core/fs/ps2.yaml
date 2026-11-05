@@ -1,0 +1,36 @@
+project: fs
+
+targets:
+  - name: fs
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/pfs.c
+      - src/pfs_fio.c
+      - src/pfs_fioctl.c
+      - src/bitmap.c
+      - src/dir.c
+      - src/inode.c
+      - src/journal.c
+      - src/misc.c
+      - src/super.c
+      - src/superWrite.c
+      - src/cache.c
+      - src/block.c
+      - src/blockWrite.c
+    imports_lst: src/imports.lst
+    libs: [gcc]
+    defines:
+      - IOMANX_OLD_NAME_COMPATIBILITY=0
+      - IOMANX_OLD_NAME_ADDDELDRV=0
+    include_dirs:
+      - include
+      - src
+      - ../cdvd/include
+      - ../intrman/include
+      - ../iomanx/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

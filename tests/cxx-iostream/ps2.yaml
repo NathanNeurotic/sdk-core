@@ -1,0 +1,13 @@
+project: cxx-iostream
+
+targets:
+  - name: cxx-iostream
+    type: ee
+    sources:
+      - src/main.cpp
+    libs:
+      - kernel
+    cflags:
+      - -fno-exceptions
+      - -fno-rtti
+      - -std=c++20

@@ -1,0 +1,13 @@
+project: crash-terminate
+
+targets:
+  - name: crash-terminate
+    type: ee
+    debug: true
+    sources:
+      - src/main.cpp
+    libs:
+      - crashscreen
+      - kernel
+    cflags:
+      - -std=c++20

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_atad core/atad
+ * @brief ATA Device Driver definitions and imports.
+ */

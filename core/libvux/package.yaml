@@ -1,0 +1,10 @@
+name: vux
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include]
+    lib: lib/libvux.a

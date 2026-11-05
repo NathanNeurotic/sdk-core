@@ -1,0 +1,23 @@
+project: cdfs
+
+targets:
+  - name: cdfs
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/main.c
+      - src/cdfs_iop.c
+    imports_lst: src/imports.lst
+    include_dirs:
+      - src
+      - ../cdvd/include
+      - ../sior/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../sifcmd/include
+      - ../sifman/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

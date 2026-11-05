@@ -1,0 +1,14 @@
+project: mpeg
+
+targets:
+  - name: mpeg
+    type: ee_lib
+    sources:
+      - src/libmpeg.c
+      - src/libmpeg_core.c
+      - src/libmpeg_op.s
+    include_dirs:
+      - include
+      - src
+      - ../dma/include
+      - ../kernel/include

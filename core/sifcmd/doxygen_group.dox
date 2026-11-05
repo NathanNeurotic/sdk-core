@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_sifcmd core/sifcmd
+ * @brief SIF CMD and RPC.
+ */

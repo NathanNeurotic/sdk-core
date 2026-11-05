@@ -1,0 +1,18 @@
+project: eesync-nano
+
+targets:
+  - name: eesync_nano
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../eesync/src/eesync.c
+    imports_lst: ../eesync/src/imports.lst
+    exports_tab: ../eesync/src/exports.tab
+    include_dirs:
+      - ../eesync/src
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../sifman/include
+      - ../sysclib/include
+      - ../sysmem/include

@@ -1,0 +1,21 @@
+project: usbmass_bd
+
+targets:
+  - name: usbmass_bd
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/main.c
+      - src/usb_mass.c
+      - src/scsi.c
+    imports_lst: src/imports.lst
+    libs: [gcc]
+    include_dirs:
+      - src
+      - src/include
+      - ../bdm/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include
+      - ../usbd/include

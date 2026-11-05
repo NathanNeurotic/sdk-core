@@ -1,0 +1,13 @@
+project: cxx-thread-local
+
+targets:
+  - name: cxx-thread-local
+    type: ee
+    sources:
+      - src/main.cpp
+    libs:
+      - kernel
+    cflags:
+      - -fno-exceptions
+      - -fno-rtti
+      - -std=c++20

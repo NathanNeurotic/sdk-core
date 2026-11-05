@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_vblank core/vblank
+ * @brief Vertical blank interrupt routines.
+ */

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_sior core/sior
+ * @brief IOP-side SIO remote service.
+ */

@@ -1,0 +1,21 @@
+project: ps2ips-iop
+
+targets:
+  - name: ps2ips_iop
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/ps2ips.c
+    imports_lst: src/imports.lst
+    include_dirs:
+      - src
+      - ../ps2ip-nm/include
+      - ../ps2ip-nm/include/arch
+      - ../ps2ip/include/lwip_include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../sifcmd/include
+      - ../sifman/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include

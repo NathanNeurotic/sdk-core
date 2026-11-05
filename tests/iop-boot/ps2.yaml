@@ -1,0 +1,69 @@
+project: iop-boot
+
+targets:
+  - name: iop-boot
+    type: ee
+    sources:
+      - src/main.c
+    embed_irx:
+      - iomanx
+      - filexio
+      - bdm
+      - dev9
+      - usbd
+      - usbd_mini
+      - sio2man
+      - sior
+      - extflash
+      - iLinkman
+      - netman
+      - ps2ip-nm
+      - ps2ip-stack
+      - smap
+      - smap-ps2ip
+      - netfs
+      - kbd
+      - mouse
+      - ps2cam
+      - usbhdfsd
+      - usbmass_bd
+      - usbmass_bd_mini
+      - IEEE1394_bd
+      - IEEE1394_bd_mini
+      - atad
+      - hdpro_atad
+      - apa
+      - hdd-osd
+      - fs
+      - fs-osd
+      - pvrdrv
+      - dvr
+      - dvrfile
+      - dvrmisc
+      - libsd
+      - sdhd
+      - sdsq
+      - bdmfs_fatfs
+      - cdfs
+      - dmacman
+      - eesync
+      - eesync-nano
+      - heaplib
+      - mcserv
+      - poweroff
+      - rmreset
+      - secrsif
+      - sio2log
+      - ssbusc
+      - xfromman
+      - xfromserv
+      - mcman
+      - padman
+      - mtapman
+      - rmman
+      - excepman
+      - mx4sio_bd
+      - mx4sio_bd_mini
+    libs:
+      - patches
+      - kernel

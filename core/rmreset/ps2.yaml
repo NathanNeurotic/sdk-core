@@ -1,0 +1,13 @@
+project: rmreset
+
+targets:
+  - name: rmreset
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/rmreset.c
+    imports_lst: src/imports.lst
+    include_dirs:
+      - ../loadcore/include
+      - ../stdio/include
+      - src

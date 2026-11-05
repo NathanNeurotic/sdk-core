@@ -1,0 +1,10 @@
+project: ahx
+
+targets:
+  - name: ahx
+    type: ee_lib
+    sources:
+      - src/ahx_rpc.c
+    include_dirs:
+      - include
+    headers: [kernel]

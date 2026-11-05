@@ -1,0 +1,11 @@
+project: crash-break
+
+targets:
+  - name: crash-break
+    type: ee
+    debug: true
+    sources:
+      - src/main.c
+    libs:
+      - crashscreen
+      - kernel

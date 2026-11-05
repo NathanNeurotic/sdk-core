@@ -1,0 +1,28 @@
+project: IEEE1394_bd
+
+targets:
+  - name: IEEE1394_bd
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/sbp2_driver.c
+      - src/main.c
+      - src/scsi.c
+    imports_lst: src/imports.lst
+    libs: [gcc]
+    cflags:
+      - -mno-check-zero-division
+    include_dirs:
+      - src
+      - src/include
+      - ../bdm/include
+      - ../cdvd/include
+      - ../iLinkman/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../sifcmd/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

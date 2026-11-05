@@ -1,0 +1,41 @@
+project: bdm
+
+targets:
+  - name: bdm
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/main.c
+      - src/bdm.c
+      - src/part_driver.c
+      - src/part_driver_mbr.c
+      - src/part_driver_gpt.c
+      - src/libbdm/bd_cache.c
+      - src/libbdm/bd_defrag.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    libs: [gcc]
+    include_dirs:
+      - include
+      - src
+      - src/include
+      - src/libbdm/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include
+
+  - name: libbdm
+    type: iop_lib
+    sources:
+      - src/libbdm/bd_cache.c
+      - src/libbdm/bd_defrag.c
+    include_dirs:
+      - include
+      - src/libbdm/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

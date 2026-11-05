@@ -1,0 +1,62 @@
+project: ps2ip-nm
+
+targets:
+  - name: ps2ip_nm
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/netman/ps2ip.c
+      - src/sys_arch.c
+      - ../ps2ip/src/lwip/core/sys.c
+      - ../ps2ip/src/lwip/core/lwip_init.c
+      - ../ps2ip/src/lwip/core/mem.c
+      - ../ps2ip/src/lwip/core/netif.c
+      - ../ps2ip/src/lwip/core/pbuf.c
+      - ../ps2ip/src/lwip/core/stats.c
+      - ../ps2ip/src/lwip/core/tcp_in.c
+      - ../ps2ip/src/lwip/core/tcp_out.c
+      - ../ps2ip/src/lwip/core/udp.c
+      - ../ps2ip/src/lwip/core/memp.c
+      - ../ps2ip/src/lwip/core/tcp.c
+      - ../ps2ip/src/lwip/core/raw.c
+      - ../ps2ip/src/lwip/core/def.c
+      - ../ps2ip/src/lwip/core/timeouts.c
+      - ../ps2ip/src/lwip/core/ip.c
+      - ../ps2ip/src/lwip/core/inet_chksum.c
+      - ../ps2ip/src/lwip/core/dns.c
+      - ../ps2ip/src/lwip/core/ipv4/icmp.c
+      - ../ps2ip/src/lwip/core/ipv4/ip4.c
+      - ../ps2ip/src/lwip/core/ipv4/ip4_addr.c
+      - ../ps2ip/src/lwip/core/ipv4/ip4_frag.c
+      - ../ps2ip/src/lwip/core/ipv4/etharp.c
+      - ../ps2ip/src/lwip/core/ipv4/dhcp.c
+      - ../ps2ip/src/lwip/netif/ethernet.c
+      - ../ps2ip/src/lwip/api/api_lib.c
+      - ../ps2ip/src/lwip/api/api_msg.c
+      - ../ps2ip/src/lwip/api/netbuf.c
+      - ../ps2ip/src/lwip/api/err.c
+      - ../ps2ip/src/lwip/api/sockets.c
+      - ../ps2ip/src/lwip/api/tcpip.c
+      - ../ps2ip/src/lwip/api/netdb.c
+    imports_lst: src/netman/imports.lst
+    exports_tab: src/exports.tab
+    defines:
+      - LWIP_NOASSERT
+      - LWIP_COMPAT_MUTEX
+      - LWIP_COMPAT_MUTEX_ALLOWED
+      - PS2IP_DHCP
+      - LWIP_DHCP
+      - PS2IP_DNS
+    include_dirs:
+      - include
+      - include/arch
+      - src/netman
+      - src
+      - ../netman/include
+      - ../ps2ip/include/lwip_include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

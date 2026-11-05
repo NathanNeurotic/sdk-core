@@ -1,0 +1,10 @@
+project: mtap
+
+targets:
+  - name: mtap
+    type: ee_lib
+    sources:
+      - src/libmtap.c
+    include_dirs:
+      - include
+      - ../kernel/include

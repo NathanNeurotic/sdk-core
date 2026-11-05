@@ -1,0 +1,19 @@
+project: driver-blockdev
+
+targets:
+  - name: ramdisk_bd
+    type: iop
+    sources:
+      - src/iop/ramdisk_bd.c
+      - src/iop/image.c
+    imports_lst: src/iop/imports.lst
+    include_dirs:
+      - src/iop
+    headers: [bdm, stdio, sysclib, sysmem, threadman]
+
+  - name: driver-blockdev
+    type: ee
+    sources:
+      - src/ee/main.c
+    libs: [filexio, patches, kernel]
+    embed_irx: [iomanx, filexio, bdm, bdmfs_fatfs, ramdisk_bd]

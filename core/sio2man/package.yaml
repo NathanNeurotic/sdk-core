@@ -1,0 +1,29 @@
+name: sio2man
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [loadcore,intrman,dmacman,threadman]
+    irx: bin/sio2man.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/freesio2.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/rsio2man.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/sio2man-old.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/sio2man-1300.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/sio2man-1400.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/sio2man-2000.irx

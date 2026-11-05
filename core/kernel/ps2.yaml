@@ -1,0 +1,44 @@
+project: kernel
+
+targets:
+  - name: kernel
+    type: ee_lib
+    sources:
+      - src/kernel.S
+      - src/sifcmd.c
+      - src/sifrpc.c
+      - src/fileio.c
+      - src/loadfile.c
+      - src/rom0_info.c
+      - src/osd_config.c
+      - src/timer.c
+      - src/timer_alarm.c
+      - src/delaythread.c
+      - src/getkernel.c
+      - src/setup.c
+      - src/iopheap.c
+      - src/iopcontrol.c
+      - src/glue.c
+      - src/thread.c
+      - src/sio.c
+      - src/initsys.c
+      - src/kernel_util.c
+      - src/exit.c
+      - src/libosd.c
+      - src/libosd_full.c
+      - src/libosd_common.c
+      - src/tlbfunc.c
+      - src/deci2.c
+      - src/tty.c
+      - src/debug.c
+      - src/setup_syscalls.S
+      - src/alarm.c
+      - src/osdsrc_bin.c
+      - src/tlbsrc_bin.c
+      - src/srcfile_bin.c
+      - src/eenull_bin.c
+    include_dirs:
+      - include
+    headers: [cdvd]
+    cflags:
+      - -ffunction-sections

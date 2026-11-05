@@ -1,0 +1,11 @@
+name: graph
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include]
+    headers: [dma, packet]
+    lib: lib/libgraph.a

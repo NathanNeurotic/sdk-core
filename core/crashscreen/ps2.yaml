@@ -1,0 +1,11 @@
+project: crashscreen
+
+targets:
+  - name: crashscreen
+    type: ee_lib
+    sources:
+      - src/crashscreen.c
+      - src/crash_vector.S
+    include_dirs:
+      - include
+      - ../kernel/include

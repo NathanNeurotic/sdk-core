@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_stdio core/stdio
+ * @brief Standard C Library I/O.
+ */

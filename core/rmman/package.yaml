@@ -1,0 +1,11 @@
+name: rmman
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [intrman,loadcore,sio2man,sifcmd,sifman,stdio,threadman,vblank]
+    irx: bin/rmman.irx

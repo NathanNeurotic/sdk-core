@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_threadman core/threadman
+ * @brief Kernel-based threads.
+ */

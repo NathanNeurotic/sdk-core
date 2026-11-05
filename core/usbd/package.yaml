@@ -1,0 +1,11 @@
+name: usbd
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [intrman,loadcore,stdio,sysclib,sysmem,threadman]
+    irx: bin/usbd.irx

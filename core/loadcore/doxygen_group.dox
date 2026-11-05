@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_loadcore core/loadcore
+ * @brief Kernel module loader.
+ */

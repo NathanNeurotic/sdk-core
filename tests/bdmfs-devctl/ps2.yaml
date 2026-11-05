@@ -1,0 +1,9 @@
+project: bdmfs-devctl
+
+targets:
+  - name: bdmfs-devctl
+    type: ee
+    sources:
+      - src/main.c
+    libs: [debug, filexio, patches, kernel]
+    embed_irx: [iomanx, filexio, usbd, bdm, bdmfs_fatfs, usbmass_bd]

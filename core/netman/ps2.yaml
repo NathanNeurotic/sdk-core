@@ -1,0 +1,34 @@
+project: netman
+
+targets:
+  - name: netman
+    type: ee_lib
+    sources:
+      - src/ee/netman.c
+      - src/ee/rpc_client.c
+      - src/ee/rpc_server.c
+    include_dirs:
+      - src/ee
+      - ../kernel/include
+
+  - name: netmandrv
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/iop/netman.c
+      - src/iop/rpc_client.c
+      - src/iop/rpc_server.c
+      - src/iop/netdev.c
+    imports_lst: src/iop/imports.lst
+    exports_tab: src/iop/exports.tab
+    include_dirs:
+      - include
+      - src/iop
+      - ../loadcore/include
+      - ../intrman/include
+      - ../sifcmd/include
+      - ../sifman/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

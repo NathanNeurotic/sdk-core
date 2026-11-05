@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_debug core/debug
+ * @brief EE Debug prototypes
+ */

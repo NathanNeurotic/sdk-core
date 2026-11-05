@@ -1,0 +1,9 @@
+name: smap-ps2ip
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    irx: bin/smap-ps2ip.irx

@@ -1,0 +1,4 @@
+build-*/
+*.log
+ps2.hw-*.yaml
+hardware/

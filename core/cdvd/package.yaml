@@ -1,0 +1,16 @@
+name: cdvd
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include]
+    headers: [kernel]
+    lib: lib/libcdvd.a
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [sysmem, loadcore, intrman, stdio, dmacman, threadman, sysclib, iomanx]
+    irx: bin/cdvdman.irx

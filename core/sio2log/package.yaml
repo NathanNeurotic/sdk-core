@@ -1,0 +1,9 @@
+name: sio2log
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    irx: bin/sio2log.irx

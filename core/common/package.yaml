@@ -1,0 +1,9 @@
+name: common
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: headers
+    target: [ee, iop]
+    include_dirs: [include]

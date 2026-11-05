@@ -1,0 +1,22 @@
+project: iopmgr
+
+targets:
+  - name: iopmgr
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/main.c
+      - src/smod.c
+      - src/slib.c
+      - src/devices.c
+      - src/commandline.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - src
+      - include
+      - ../ioman/include
+      - ../iomanx/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include

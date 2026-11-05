@@ -1,0 +1,10 @@
+project: remote
+
+targets:
+  - name: rm
+    type: ee_lib
+    sources:
+      - src/librm.c
+    include_dirs:
+      - include
+      - ../kernel/include

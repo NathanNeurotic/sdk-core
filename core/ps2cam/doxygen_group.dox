@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_ps2cam core/ps2cam
+ * @brief PS2Camera driver irx
+ */

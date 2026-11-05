@@ -1,0 +1,10 @@
+project: pad
+
+targets:
+  - name: pad
+    type: ee_lib
+    sources:
+      - src/libpad.c
+    include_dirs:
+      - include
+      - ../kernel/include

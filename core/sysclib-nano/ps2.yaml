@@ -1,0 +1,60 @@
+project: sysclib-nano
+
+targets:
+  - name: sysclib-nano
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../sysclib/src/_start.c
+      - ../sysclib/src/nonstd/atob.c
+      - ../sysclib/src/nonstd/ctype.c
+      - ../sysclib/src/nonstd/_wmemcopy.c
+      - ../sysclib/src/nonstd/_wmemset.c
+      - ../sysclib/src/size_optimized/strtol.c
+      - ../sysclib/src/size_optimized/strtoul.c
+      - ../sysclib/src/size_optimized/sysclib_determine_base.c
+      - ../sysclib/src/size_optimized/memchr.c
+      - ../sysclib/src/size_optimized/memmove.c
+      - ../sysclib/src/size_optimized/strchr.c
+      - ../sysclib/src/size_optimized/rindex.c
+      - ../sysclib/src/size_optimized/strrchr.c
+      - ../sysclib/src/size_optimized/strspn.c
+      - ../sysclib/src/size_optimized/strstr.c
+      - ../sysclib/src/size_optimized/strtok_r.c
+      - ../sysclib/src/size_optimized/strtok.c
+      - ../sysclib/src/musl/ctype/tolower.c
+      - ../sysclib/src/musl/ctype/toupper.c
+      - ../sysclib/src/musl/string/memcmp.c
+      - ../sysclib/src/musl/string/memrchr.c
+      - ../sysclib/src/musl/string/bcmp.c
+      - ../sysclib/src/musl/string/bcopy.c
+      - ../sysclib/src/musl/string/bzero.c
+      - ../sysclib/src/musl/string/stpcpy.c
+      - ../sysclib/src/musl/string/stpncpy.c
+      - ../sysclib/src/musl/string/strcat.c
+      - ../sysclib/src/musl/string/strchrnul.c
+      - ../sysclib/src/musl/string/strcpy.c
+      - ../sysclib/src/musl/string/strcspn.c
+      - ../sysclib/src/musl/string/index.c
+      - ../sysclib/src/musl/string/strncat.c
+      - ../sysclib/src/musl/string/strncmp.c
+      - ../sysclib/src/musl/string/strpbrk.c
+      - ../sysclib/src/eyalroz_printf/printf.c
+      - ../sysclib/src/newlib/libc/machine/mips/setjmp.S
+      - ../sysclib/src/newlib/libc/machine/mips/memcpy.S
+      - ../sysclib/src/newlib/libc/machine/mips/memset.S
+      - ../sysclib/src/newlib/libc/machine/mips/strcmp.S
+      - ../sysclib/src/newlib/libc/machine/mips/strlen.c
+      - ../sysclib/src/newlib/libc/machine/mips/strncpy.c
+    imports_lst: ../sysclib/src/imports.lst
+    exports_tab: ../sysclib/src/exports.tab
+    defines:
+      - _COMPILING_NEWLIB
+      - PRINTF_ALIAS_STANDARD_FUNCTION_NAMES=1
+      - PRINTF_SUPPORT_DECIMAL_SPECIFIERS=0
+      - PRINTF_SUPPORT_EXPONENTIAL_SPECIFIERS=0
+      - PRINTF_SUPPORT_LONG_LONG=0
+    include_dirs:
+      - ../sysclib/include
+      - ../loadcore/include
+      - ../sysclib/src

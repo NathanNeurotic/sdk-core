@@ -1,0 +1,12 @@
+project: elf-loader-nocolour
+
+targets:
+  - name: elf-loader-nocolour
+    type: ee_lib
+    sources:
+      - src/elf.c
+      - src/loader.c
+    include_dirs:
+      - include
+      - src
+    headers: [kernel, cglue]

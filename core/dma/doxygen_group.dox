@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_dma core/dma
+ * @brief DMA channel utilities
+ */

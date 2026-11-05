@@ -1,0 +1,22 @@
+project: sio2log
+
+targets:
+  - name: sio2log
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../sio2man/src/sio2man.c
+      - ../sio2man/src/log.c
+    defines:
+      - SIO2LOG
+    imports_lst: ../sio2man/src/imports.lst
+    exports_tab: ../sio2man/src/exports.tab
+    include_dirs:
+      - ../sio2man/include
+      - ../loadcore/include
+      - ../intrman/include
+      - ../dmacman/include
+      - ../threadman/include
+      - ../ioman/include
+      - ../stdio/include
+      - ../sio2man/src

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_poweroff core/poweroff
+ * @brief Power-off processing definitions and imports.
+ */

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_pvrdrv core/pvrdrv
+ * @brief Personal video recorder driver. Interface to the DVRP through the DEV9 interface.
+ */

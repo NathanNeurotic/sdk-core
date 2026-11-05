@@ -1,0 +1,10 @@
+project: dma
+
+targets:
+  - name: dma
+    type: ee_lib
+    sources:
+      - src/dma.c
+    include_dirs:
+      - include
+    headers: [packet2, kernel]

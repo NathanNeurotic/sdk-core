@@ -1,0 +1,30 @@
+project: kbd
+
+targets:
+  - name: kbd
+    type: ee_lib
+    sources:
+      - src/libkbd.c
+    include_dirs:
+      - include
+    headers: [kernel, cglue]
+
+  - name: ps2kbddrv
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/iop/ps2kbd.c
+    imports_lst: src/iop/imports.lst
+    include_dirs:
+      - include/iop
+      - src/iop
+      - ../dmacman/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../sifcmd/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include
+      - ../usbd/include

@@ -1,0 +1,11 @@
+project: font
+
+targets:
+  - name: font
+    type: ee_lib
+    sources:
+      - src/fontx.c
+      - src/fsfont.c
+    include_dirs:
+      - include
+    headers: [draw, math3d]

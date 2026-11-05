@@ -1,0 +1,11 @@
+name: math3d
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include]
+    headers: [graph]
+    lib: lib/libmath3d.a

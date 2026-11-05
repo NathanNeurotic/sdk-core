@@ -1,0 +1,142 @@
+/*
+# _____     ___ ____     ___ ____
+#  ____|   |    ____|   |        | |____|
+# |     ___|   |____ ___|    ____| |    \    PS2DEV Open Source Project.
+#-----------------------------------------------------------------------
+# Copyright 2001-2004, ps2dev - http://www.ps2dev.org
+# Licenced under Academic Free License version 2.0
+# Review ps2sdk README & LICENSE files for further details.
+#
+# Linkfile script for ee-ld
+*/
+
+ENTRY(__start);
+
+PHDRS {
+  text PT_LOAD;
+}
+
+SECTIONS {
+	.text 0x00100000: {
+		_ftext = . ;
+		*(.text)
+		*(.text.*)
+		*(.gnu.linkonce.t*)
+		KEEP(*(.init))
+		KEEP(*(.fini))
+		QUAD(0)
+	} :text
+
+	PROVIDE(_etext = .);
+	PROVIDE(etext = .);
+
+	/* Global/static constructors and deconstructors. This build never
+	   links gcc's own crtbegin.o/crtend.o (-nostartfiles), so there's
+	   no -1 start sentinel or 0 end terminator for crt0.c's own
+	   __do_global_ctors-style walk to rely on - __CTOR_LIST__/
+	   __CTOR_END__ give it real, safe bounds instead. */
+	.ctors ALIGN(16): {
+		PROVIDE(__CTOR_LIST__ = .);
+		KEEP(*crtbegin*.o(.ctors))
+		KEEP(*(EXCLUDE_FILE(*crtend*.o) .ctors))
+		KEEP(*(SORT(.ctors.*)))
+		KEEP(*(.ctors))
+		PROVIDE(__CTOR_END__ = .);
+	}
+	.dtors ALIGN(16): {
+		PROVIDE(__DTOR_LIST__ = .);
+		KEEP(*crtbegin*.o(.dtors))
+		KEEP(*(EXCLUDE_FILE(*crtend*.o) .dtors))
+		KEEP(*(SORT(.dtors.*)))
+		KEEP(*(.dtors))
+		PROVIDE(__DTOR_END__ = .);
+	}
+
+	/* clang emits .init_array (not .ctors) for global/static C++
+	   constructors - __init_array_start/__init_array_end give crt0.c's
+	   own walk real bounds, same reasoning as __CTOR_LIST__/__CTOR_END__
+	   above. Without this, an .init_array-only object still links (no
+	   input section rule means it's an orphan lld quietly places
+	   somewhere allocatable) but nothing ever runs it. */
+	.init_array ALIGN(16): {
+		PROVIDE(__init_array_start = .);
+		KEEP(*(SORT_BY_INIT_PRIORITY(.init_array.*)))
+		KEEP(*(.init_array))
+		PROVIDE(__init_array_end = .);
+	}
+
+	.reginfo : { *(.reginfo) }
+
+	.data ALIGN(128): {
+		_fdata = . ;
+		*(.data)
+		*(.data.*)
+		*(.gnu.linkonce.d*)
+		SORT(CONSTRUCTORS)
+	}
+
+	/* Static data.  */
+	.rodata ALIGN(128): {
+		*(.rodata)
+		*(.rodata.*)
+		*(.gnu.linkonce.r*)
+	}
+
+	/* Unwind tables for libunwind (C++ exceptions); __eh_frame_hdr_* are 0 unless
+	   the link uses --eh-frame-hdr. */
+	.eh_frame ALIGN(8): {
+		PROVIDE(__eh_frame_start = .);
+		KEEP(*(.eh_frame))
+		KEEP(*(.eh_frame.*))
+		PROVIDE(__eh_frame_end = .);
+	}
+	.eh_frame_hdr : {
+		KEEP(*(.eh_frame_hdr))
+	}
+	PROVIDE(__eh_frame_hdr_start = SIZEOF(.eh_frame_hdr) > 0 ? ADDR(.eh_frame_hdr) : 0);
+	PROVIDE(__eh_frame_hdr_end = SIZEOF(.eh_frame_hdr) > 0 ? . : 0);
+	.rdata ALIGN(128): { *(.rdata) }
+	.gcc_except_table ALIGN(128): { *(.gcc_except_table) }
+
+	_gp = ALIGN(128) + 0x7ff0;
+	.lit4 ALIGN(128): { *(.lit4) }
+	.lit8 ALIGN(128): { *(.lit8) }
+
+	.sdata ALIGN(128): {
+		*(.sdata)
+		*(.sdata.*)
+		*(.gnu.linkonce.s*)
+	}
+
+	_edata = .;
+	PROVIDE(edata = .);
+
+	/* Uninitialized data.  */
+	.sbss ALIGN(128) : {
+		_fbss = . ;
+		*(.sbss)
+		*(.sbss.*)
+		*(.gnu.linkonce.sb*)
+		*(.scommon)
+	}
+
+	.bss ALIGN(128) : {
+		*(.bss)
+		*(.bss.*)
+		*(.gnu.linkonce.b*)
+		*(COMMON)
+	}
+	_end_bss = .;
+
+	_end = . ;
+	PROVIDE(end = .);
+
+	.spad 0x70000000: {
+		*(.spad)
+	}
+
+	/* Symbols needed by crt0.s.  */
+	PROVIDE(_heap_size = -1);
+	PROVIDE(_stack = -1);
+	PROVIDE(_stack_size = 128 * 1024);
+}

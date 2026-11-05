@@ -1,0 +1,22 @@
+project: mcserv
+
+targets:
+  - name: mcserv
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/mcserv.c
+    defines:
+      - BUILDING_XMCSERV
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - src
+      - ../loadcore/include
+      - ../intrman/include
+      - ../sysclib/include
+      - ../sifman/include
+      - ../sifcmd/include
+      - ../threadman/include
+      - ../stdio/include
+      - ../mcman/include

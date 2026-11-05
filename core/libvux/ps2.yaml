@@ -1,0 +1,12 @@
+project: libvux
+
+targets:
+  - name: vux
+    type: ee_lib
+    sources:
+      - src/vux.c
+      - src/vuhw.c
+      - src/vusw.c
+    include_dirs:
+      - include
+      - src

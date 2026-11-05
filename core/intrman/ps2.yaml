@@ -1,0 +1,15 @@
+project: intrman
+
+targets:
+  - name: intrman
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/intrman.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - ../excepman/include
+      - ../loadcore/include
+      - src

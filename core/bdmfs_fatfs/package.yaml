@@ -1,0 +1,10 @@
+name: bdmfs_fatfs
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    headers: [bdm,cdvd,intrman,ioman,iomanx,loadcore,stdio,sysclib,sysmem,threadman]
+    irx: bin/bdmfs_fatfs.irx

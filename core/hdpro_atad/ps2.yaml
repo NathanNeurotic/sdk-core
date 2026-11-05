@@ -1,0 +1,18 @@
+project: hdpro_atad
+
+targets:
+  - name: hdpro_atad
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/hdproatad.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - src
+      - ../atad/include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include

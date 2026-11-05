@@ -1,0 +1,13 @@
+project: erl
+
+targets:
+  - name: erl
+    type: ee_lib
+    sources:
+      - src/erl.c
+      - src/hashtab.c
+      - src/lookupa.c
+      - src/recycle.c
+    include_dirs:
+      - include
+    headers: [kernel]

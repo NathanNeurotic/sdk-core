@@ -1,0 +1,11 @@
+name: iomanx
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [intrman,loadcore,stdio,sysclib,sysmem]
+    irx: bin/iomanX.irx

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_usbd core/usbd
+ * @brief USB Driver function prototypes and constants.
+ */

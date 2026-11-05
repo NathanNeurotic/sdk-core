@@ -1,0 +1,17 @@
+project: iop-tailcall
+
+targets:
+  - name: tc
+    type: iop
+    sources:
+      - src/iop/tc.c
+
+  - name: iop-tailcall
+    type: ee
+    sources:
+      - src/ee/main.c
+    embed_irx:
+      - tc
+    libs:
+      - patches
+      - kernel

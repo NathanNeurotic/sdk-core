@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_elf_loader_nocolour core/elf-loader-nocolour
+ * @brief ELF Loader functions.
+ */

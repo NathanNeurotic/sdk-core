@@ -1,0 +1,15 @@
+name: xfromserv
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    irx: bin/xfromserv.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/xfromsrv.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/xfrmserv.irx

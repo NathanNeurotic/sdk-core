@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_ps2ip_nm core/ps2ip-nm
+ * @brief Imports and definitions for ps2ip.
+ */

@@ -1,0 +1,35 @@
+project: cdvd
+
+targets:
+  - name: cdvd
+    type: ee_lib
+    sources:
+      - src/ee/libcdvd.c
+      - src/ee/ncmd.c
+      - src/ee/scmd.c
+    cflags:
+      - -ffunction-sections
+    include_dirs:
+      - include
+    headers: [kernel]
+
+  - name: cdvdman
+    type: iop
+    sources:
+      - src/iop/cdvdman.c
+    imports_lst: src/iop/imports.lst
+    exports_tab: src/iop/exports.tab
+    defines:
+      - BUILDING_CDVD_MODULE
+    linkfile: ../startup/share/iop/linkfile
+    include_dirs:
+      - include
+      - ../sysmem/include
+      - ../loadcore/include
+      - ../intrman/include
+      - ../stdio/include
+      - ../dmacman/include
+      - ../threadman/include
+      - ../sysclib/include
+      - ../iomanx/include
+      - src/iop

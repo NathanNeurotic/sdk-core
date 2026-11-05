@@ -1,0 +1,34 @@
+project: mcman-2000
+
+targets:
+  - name: mcman-2000
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../mcman/src/main.c
+      - ../mcman/src/mcdev.c
+      - ../mcman/src/mciomanx_backing.c
+      - ../mcman/src/mcsio2.c
+      - ../mcman/src/ps1mc_fio.c
+      - ../mcman/src/ps2mc_fio.c
+    defines:
+      - BUILDING_XMCMAN
+      - SIO2MAN_V2
+    imports_lst: ../mcman/src/imports.lst
+    exports_tab: ../mcman/src/exports.tab
+    include_dirs:
+      - ../mcman/include
+      - ../cdvd/include
+      - ../secrman/include
+      - ../sior/include
+      - ../sio2man/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../iomanx/include
+      - ../loadcore/include
+      - ../modload/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include
+      - ../timrman/include
+      - ../mcman/src

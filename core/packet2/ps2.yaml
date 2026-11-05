@@ -1,0 +1,11 @@
+project: packet2
+
+targets:
+  - name: packet2
+    type: ee_lib
+    sources:
+      - src/packet2.c
+      - src/packet2_vif.c
+    include_dirs:
+      - include
+      - ../kernel/include

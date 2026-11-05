@@ -1,0 +1,12 @@
+project: sysmem
+
+targets:
+  - name: sysmem
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/sysmem.c
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - ../loadcore/include

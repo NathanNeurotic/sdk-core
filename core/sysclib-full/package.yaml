@@ -1,0 +1,10 @@
+name: sysclib-full
+origin: ps2sdk
+tier: core
+# Licenses as in ../sysclib.
+license: "AFL-2.0 AND MIT AND APSL-1.1 AND Newlib-permissive"
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    irx: bin/sysclib-full.irx

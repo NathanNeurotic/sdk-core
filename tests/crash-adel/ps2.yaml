@@ -1,0 +1,11 @@
+project: crash-adel
+
+targets:
+  - name: crash-adel
+    type: ee
+    debug: true
+    sources:
+      - src/main.c
+    libs:
+      - crashscreen
+      - kernel

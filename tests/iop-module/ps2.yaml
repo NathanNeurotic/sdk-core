@@ -1,0 +1,17 @@
+project: iop-module
+
+targets:
+  - name: probe
+    type: iop
+    sources:
+      - src/iop/probe.c
+
+  - name: iop-module
+    type: ee
+    sources:
+      - src/ee/main.c
+    embed_irx:
+      - probe
+    libs:
+      - patches
+      - kernel

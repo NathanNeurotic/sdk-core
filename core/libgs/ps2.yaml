@@ -1,0 +1,21 @@
+project: libgs
+
+targets:
+  - name: gs
+    type: ee_lib
+    sources:
+      - src/libgs.c
+      - src/ResetPath.s
+      - src/dma.c
+      - src/DoubleBuff.c
+      - src/draw.c
+      - src/Zbuffer.c
+      - src/lowlevel.c
+      - src/packets.c
+      - src/primitives.c
+      - src/sync.c
+      - src/texture.c
+    include_dirs:
+      - include
+      - src
+    headers: [kernel]

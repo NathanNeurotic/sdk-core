@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_eedebug core/eedebug
+ * @brief EEDEBUG - EE debugging library. Definitions for the EEDEBUG library.
+ */

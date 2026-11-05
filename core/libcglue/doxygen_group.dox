@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_libcglue core/libcglue
+ * @brief sjis function prototypes
+ */

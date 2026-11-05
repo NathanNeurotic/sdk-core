@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_rmreset core/rmreset
+ * @brief IR receiver reset driver.
+ */

@@ -1,0 +1,35 @@
+project: apa
+
+targets:
+  - name: hdd
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/hdd_fio.c
+      - src/hdd_blkio.c
+      - src/hdd.c
+      - src/apa.c
+      - src/cache.c
+      - src/free.c
+      - src/journal.c
+      - src/misc.c
+      - src/password.c
+    imports_lst: src/imports.lst
+    defines:
+      - IOMANX_OLD_NAME_COMPATIBILITY=0
+      - IOMANX_OLD_NAME_ADDDELDRV=0
+      - APA_USE_DEV9
+      - APA_USE_ATAD
+    include_dirs:
+      - include
+      - src
+      - ../atad/include
+      - ../cdvd/include
+      - ../dev9/include
+      - ../intrman/include
+      - ../iomanx/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

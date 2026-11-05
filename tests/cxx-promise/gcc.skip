@@ -1,0 +1,1 @@
+std::thread and std::promise do not link with the GCC toolchain: __atomic_test_and_set is undefined (libatomic.a lacks it) and pthread_num_processors_np is defined by both pthreadglue and libpthread.a.

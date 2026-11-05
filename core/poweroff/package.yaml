@@ -1,0 +1,15 @@
+name: poweroff
+origin: ps2sdk
+tier: core
+
+license: AFL-2.0
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include]
+    headers: [kernel]
+    lib: lib/libpoweroff.a
+  - kind: driver
+    target: [iop]
+    include_dirs: [include/iop]
+    irx: bin/poweroff.irx

@@ -1,0 +1,13 @@
+project: graph
+
+targets:
+  - name: graph
+    type: ee_lib
+    sources:
+      - src/graph.c
+      - src/graph_config.c
+      - src/graph_mode.c
+      - src/graph_vram.c
+    include_dirs:
+      - include
+    headers: [dma, packet, kernel, math3d, cdvd]

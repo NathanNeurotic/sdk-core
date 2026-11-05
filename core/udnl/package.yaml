@@ -1,0 +1,9 @@
+name: udnl
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    irx: bin/udnl.irx

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_elf_loader2 core/elf-loader2
+ * @brief ELF Loader functions.
+ */

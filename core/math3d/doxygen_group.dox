@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_math3d core/math3d
+ * @brief 3D math functions.
+ */

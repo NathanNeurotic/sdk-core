@@ -1,0 +1,21 @@
+project: startup
+
+targets:
+  - name: startup-ee
+    type: ee_lib
+    sources:
+      - src/ee/crt0.c
+    include_dirs:
+      - include
+      - ../kernel/include
+
+  - name: startup-iop
+    type: iop_lib
+    sources:
+      - src/iop/crt0.c
+    include_dirs:
+      - include
+      - ../stdio/include
+      - ../loadcore/include
+    cflags:
+      - -Wno-array-bounds

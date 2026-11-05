@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_mcman core/mcman
+ * @brief Memory card manager definitions
+ */

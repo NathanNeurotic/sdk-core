@@ -1,0 +1,20 @@
+project: secrsif
+
+targets:
+  - name: secrsif
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/secrsif.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - src
+      - ../loadcore/include
+      - ../secrman/include
+      - ../sio2man/include
+      - ../sifcmd/include
+      - ../sifman/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include

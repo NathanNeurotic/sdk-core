@@ -1,0 +1,11 @@
+name: ahx
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include]
+    headers: [kernel]
+    lib: lib/libahx.a

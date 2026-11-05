@@ -1,0 +1,4 @@
+# GCC calls the library fmaxf, fminf and sqrtf at -O0; LLVM always uses the hardware instructions.
+fmnf
+fmxf
+sqrtf

@@ -1,0 +1,9 @@
+project: ioprpgen
+
+targets:
+  - name: ioprpgen
+    type: ee_lib
+    sources:
+      - src/ioprpgen.c
+    include_dirs:
+      - include

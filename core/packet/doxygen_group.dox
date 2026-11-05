@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_packet core/packet
+ * @brief Packet library functions.
+ */

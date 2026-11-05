@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_draw core/draw
+ * @brief Draw library main functions
+ */

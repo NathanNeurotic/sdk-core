@@ -1,0 +1,24 @@
+project: iopreboot
+
+targets:
+  - name: imgdrv
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/imgdrv/imgdrv.c
+    imports_lst: src/imgdrv/imports.lst
+    include_dirs:
+      - ../loadcore/include
+      - ../ioman/include
+      - src/imgdrv
+
+  - name: iopreboot
+    type: ee_lib
+    sources:
+      - src/SifIopRebootBuffer.c
+      - src/imgdrv_irx.c
+    cflags:
+      - -ffunction-sections
+    include_dirs:
+      - include
+    headers: [kernel, patches]

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_bdm core/bdm
+ * @brief IOP BDM (Block Device Manager) definitions.
+ */

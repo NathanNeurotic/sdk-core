@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_common core/common
+ * @brief AIF and RTC registers
+ */

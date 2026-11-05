@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_sdhd core/sdhd
+ * @brief Sound-bank (.HD) access.
+ */

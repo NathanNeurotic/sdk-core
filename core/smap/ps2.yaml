@@ -1,0 +1,29 @@
+project: smap
+
+targets:
+  - name: smap
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/main.c
+      - src/smap.c
+      - src/xfer.c
+      - src/ipstack.c
+    defines:
+      - BUILDING_SMAP_NETMAN=1
+      - BUILDING_SMAP_MODULAR=1
+      - LWIP_DHCP=1
+      - SMAP_RX_PACKETS_POLLING_MODE=1
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - src/include
+      - ../netman/include
+      - ../dmacman/include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../modload/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include

@@ -1,0 +1,15 @@
+project: eedebug
+
+targets:
+  - name: eedebug
+    type: ee_lib
+    sources:
+      - src/ee_debug.c
+      - src/ee_dbg_low.S
+      - src/ee_exceptions.S
+    cflags:
+      - -O0
+    include_dirs:
+      - include
+      - src
+    headers: [kernel]

@@ -1,0 +1,19 @@
+project: sifcmd
+
+targets:
+  - name: sifcmd
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/sifcmd.c
+      - src/sifrpc.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../sifman/include
+      - ../stdio/include
+      - ../threadman/include
+      - src

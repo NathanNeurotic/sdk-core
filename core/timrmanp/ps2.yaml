@@ -1,0 +1,17 @@
+project: timrmanp
+
+targets:
+  - name: timrmanp
+    type: iop
+    sources:
+      - ../timrman/src/timrman.c
+    linkfile: ../startup/share/iop/linkfile
+    defines:
+      - BUILDING_TIMRMANP
+    imports_lst: ../timrman/src/imports.lst
+    exports_tab: ../timrman/src/exports.tab
+    include_dirs:
+      - ../timrman/include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../timrman/src

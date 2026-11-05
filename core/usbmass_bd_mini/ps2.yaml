@@ -1,0 +1,23 @@
+project: usbmass_bd_mini
+
+targets:
+  - name: usbmass_bd_mini
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../usbmass_bd/src/main.c
+      - ../usbmass_bd/src/usb_mass.c
+      - ../usbmass_bd/src/scsi.c
+    imports_lst: ../usbmass_bd/src/imports.lst
+    libs: [gcc]
+    defines:
+      - MINI_DRIVER
+    include_dirs:
+      - ../usbmass_bd/src
+      - ../usbmass_bd/src/include
+      - ../bdm/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include
+      - ../usbd/include

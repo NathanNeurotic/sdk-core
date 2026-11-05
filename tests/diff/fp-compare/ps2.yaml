@@ -1,0 +1,10 @@
+project: diff-fp-compare
+
+targets:
+  - name: diff-fp-compare
+    type: ee
+    sources:
+      - src/main.c
+    libs:
+      - kernel
+    opt: -O2

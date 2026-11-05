@@ -1,0 +1,10 @@
+project: ps2snd
+
+targets:
+  - name: ps2snd
+    type: ee_lib
+    sources:
+      - src/ps2snd.c
+    include_dirs:
+      - include
+      - ../kernel/include

@@ -1,0 +1,34 @@
+project: filexio
+
+targets:
+  - name: filexio
+    type: ee_lib
+    sources:
+      - src/ee/fileXio_rpc.c
+      - src/ee/fileXio_ps2sdk.c
+    cflags:
+      - -ffunction-sections
+    include_dirs:
+      - include
+    headers: [kernel, cglue]
+
+  - name: filexio-iop
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/iop/fileXio_iop.c
+    defines:
+      - IOMANX_OLD_NAME_COMPATIBILITY=0
+      - IOMANX_OLD_NAME_ADDDELDRV=0
+    imports_lst: src/iop/imports.lst
+    include_dirs:
+      - src/iop
+      - ../loadcore/include
+      - ../intrman/include
+      - ../stdio/include
+      - ../iomanx/include
+      - ../sysclib/include
+      - ../sifcmd/include
+      - ../threadman/include
+      - ../sifman/include
+      - ../sysmem/include

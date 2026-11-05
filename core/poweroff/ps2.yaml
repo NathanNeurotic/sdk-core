@@ -1,0 +1,28 @@
+project: poweroff
+
+targets:
+  - name: poweroff
+    type: ee_lib
+    sources:
+      - src/poweroff.c
+    include_dirs:
+      - include
+      - ../kernel/include
+
+  - name: pwroffdrv
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/iop/poweroff.c
+    imports_lst: src/iop/imports.lst
+    exports_tab: src/iop/exports.tab
+    include_dirs:
+      - include/iop
+      - src/iop
+      - ../loadcore/include
+      - ../intrman/include
+      - ../sifcmd/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

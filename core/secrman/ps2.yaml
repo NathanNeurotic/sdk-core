@@ -1,0 +1,25 @@
+project: secrman
+
+targets:
+  - name: secrman
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/secrman.c
+      - src/MechaAuth.c
+      - src/CardAuth.c
+      - src/keyman.c
+    defines:
+      - DEX_SUPPORT=1
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - ../cdvd/include
+      - ../sio2man/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../modload/include
+      - ../stdio/include
+      - ../sysclib/include
+      - src

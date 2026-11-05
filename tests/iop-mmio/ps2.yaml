@@ -1,0 +1,17 @@
+project: iop-mmio
+
+targets:
+  - name: mmio
+    type: iop
+    sources:
+      - src/iop/mmio.c
+
+  - name: iop-mmio
+    type: ee
+    sources:
+      - src/ee/main.c
+    embed_irx:
+      - mmio
+    libs:
+      - patches
+      - kernel

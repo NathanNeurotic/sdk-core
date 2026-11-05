@@ -1,0 +1,20 @@
+project: driver-tty
+
+targets:
+  - name: rtty
+    type: iop
+    sources:
+      - src/iop/rtty.c
+    imports_lst: src/iop/imports.lst
+    include_dirs:
+      - src/iop
+    headers: [ioman, stdio, threadman]
+
+  - name: driver-tty
+    type: ee
+    sources:
+      - src/ee/main.c
+    include_dirs:
+      - src/iop
+    libs: [filexio, patches, kernel]
+    embed_irx: [iomanx, filexio, rtty]

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_cdvd core/cdvd
+ * @brief Definitions and imports for cdvdman
+ */

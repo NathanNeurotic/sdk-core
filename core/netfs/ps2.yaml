@@ -1,0 +1,21 @@
+project: netfs
+
+targets:
+  - name: ps2netfs
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/ps2netfs.c
+      - src/ps2_fio.c
+      - src/devscan.c
+    imports_lst: src/imports.lst
+    include_dirs:
+      - src
+      - ../ioman/include
+      - ../iomanx/include
+      - ../iopmgr/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include
+      - ../ps2ip-nm/include

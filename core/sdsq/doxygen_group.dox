@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_sdsq core/sdsq
+ * @brief Sequenced-music (.SQ) access.
+ */

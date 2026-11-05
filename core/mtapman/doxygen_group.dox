@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_mtapman core/mtapman
+ * @brief Multitap manager functions
+ */

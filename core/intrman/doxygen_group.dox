@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_intrman core/intrman
+ * @brief Kernel-based threads.
+ */

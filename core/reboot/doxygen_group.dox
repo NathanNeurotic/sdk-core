@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_reboot core/reboot
+ * @brief IOP reboot server for replacing the IOP module image.
+ */

@@ -1,0 +1,17 @@
+project: sbv
+
+targets:
+  - name: patches
+    type: ee_lib
+    sources:
+      - src/smem.c
+      - src/smod.c
+      - src/slib.c
+      - src/patch_enable_lmb.c
+      - src/patch_disable_prefix_check.c
+      - src/patch_user_mem_clear.c
+      - src/patch_fileio.c
+      - src/common.c
+    include_dirs:
+      - include
+      - ../kernel/include

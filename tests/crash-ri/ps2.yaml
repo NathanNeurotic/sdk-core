@@ -1,0 +1,11 @@
+project: crash-ri
+
+targets:
+  - name: crash-ri
+    type: ee
+    debug: true
+    sources:
+      - src/main.c
+    libs:
+      - crashscreen
+      - kernel

@@ -1,0 +1,17 @@
+name: startup
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include]
+    linkfile: share/ee/linkfile
+    lib: ee/lib/libstartup.a
+  - kind: library
+    target: [iop]
+    include_dirs: [include]
+    headers: [stdio]
+    linkfile: share/iop/linkfile
+    lib: iop/lib/libstartup.a

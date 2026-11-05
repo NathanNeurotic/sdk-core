@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_sysmem core/sysmem
+ * @brief System memory manager.
+ */

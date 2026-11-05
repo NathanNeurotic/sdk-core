@@ -1,0 +1,16 @@
+name: netman
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [src/ee]
+    headers: [kernel]
+    lib: lib/libnetman.a
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [loadcore,intrman,sifcmd,sifman,stdio,sysclib,sysmem,threadman]
+    irx: bin/netman.irx

@@ -1,0 +1,10 @@
+project: ee-mmi
+
+targets:
+  - name: ee-mmi
+    type: ee
+    sources:
+      - src/main.c
+      - src/mmi_asm.S
+    libs:
+      - kernel

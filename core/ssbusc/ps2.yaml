@@ -1,0 +1,15 @@
+project: ssbusc
+
+targets:
+  - name: ssbusc
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/ssbusc.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - src
+      - ../intrman/include
+      - ../loadcore/include

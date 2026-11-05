@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_mtap core/mtap
+ * @brief Functions to provide access to multi-taps.
+ */

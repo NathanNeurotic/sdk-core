@@ -1,0 +1,11 @@
+name: threadman
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [heaplib,intrman,loadcore,stdio,sysclib,sysmem,timrman]
+    irx: bin/threadman.irx

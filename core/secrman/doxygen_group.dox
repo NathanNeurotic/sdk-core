@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_secrman core/secrman
+ * @brief Definitions and imports for secrman module.
+ */

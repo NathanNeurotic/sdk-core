@@ -1,0 +1,25 @@
+project: mx4sio_bd
+
+targets:
+  - name: mx4sio_bd
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/spi_sdcard_crc7.c
+      - src/spi_sdcard_driver.c
+      - src/crc16.c
+      - src/ioplib.c
+      - src/sio2man_hook.c
+      - src/mx4sio.c
+    imports_lst: src/imports.lst
+    libs: [gcc]
+    include_dirs:
+      - src
+      - ../bdm/include
+      - ../sio2man/include
+      - ../dmacman/include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include

@@ -1,0 +1,10 @@
+project: secr
+
+targets:
+  - name: secr
+    type: ee_lib
+    sources:
+      - src/libsecr.c
+    include_dirs:
+      - include
+      - ../kernel/include

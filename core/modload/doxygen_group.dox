@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_modload core/modload
+ * @brief Kernel module loader.
+ */

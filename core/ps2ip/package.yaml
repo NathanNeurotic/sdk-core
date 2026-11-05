@@ -1,0 +1,11 @@
+name: ps2ip
+origin: ps2sdk
+tier: core
+license: BSD-3-Clause
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include, include/lwip_include, include/lwip_include/compat/posix]
+    headers: [kernel, cglue]
+    lib: lib/libps2ip.a

@@ -1,0 +1,11 @@
+project: crash-ades
+
+targets:
+  - name: crash-ades
+    type: ee
+    debug: true
+    sources:
+      - src/main.c
+    libs:
+      - crashscreen
+      - kernel

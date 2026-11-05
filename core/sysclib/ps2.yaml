@@ -1,0 +1,59 @@
+project: sysclib
+
+targets:
+  - name: sysclib
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/_start.c
+      - src/nonstd/atob.c
+      - src/nonstd/ctype.c
+      - src/nonstd/_wmemcopy.c
+      - src/nonstd/_wmemset.c
+      - src/embeddedartistry_libc/stdlib/strtol.c
+      - src/embeddedartistry_libc/stdlib/strtoul.c
+      - src/musl/string/memchr.c
+      - src/musl/string/memmove.c
+      - src/musl/string/strchr.c
+      - src/musl/string/rindex.c
+      - src/musl/string/strrchr.c
+      - src/musl/string/strspn.c
+      - src/musl/string/strstr.c
+      - src/musl/string/strtok_r.c
+      - src/musl/string/strtok.c
+      - src/musl/ctype/tolower.c
+      - src/musl/ctype/toupper.c
+      - src/musl/string/memcmp.c
+      - src/musl/string/memrchr.c
+      - src/musl/string/bcmp.c
+      - src/musl/string/bcopy.c
+      - src/musl/string/bzero.c
+      - src/musl/string/stpcpy.c
+      - src/musl/string/stpncpy.c
+      - src/musl/string/strcat.c
+      - src/musl/string/strchrnul.c
+      - src/musl/string/strcpy.c
+      - src/musl/string/strcspn.c
+      - src/musl/string/index.c
+      - src/musl/string/strncat.c
+      - src/musl/string/strncmp.c
+      - src/musl/string/strpbrk.c
+      - src/eyalroz_printf/printf.c
+      - src/newlib/libc/machine/mips/setjmp.S
+      - src/newlib/libc/machine/mips/memcpy.S
+      - src/newlib/libc/machine/mips/memset.S
+      - src/newlib/libc/machine/mips/strcmp.S
+      - src/newlib/libc/machine/mips/strlen.c
+      - src/newlib/libc/machine/mips/strncpy.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    defines:
+      - _COMPILING_NEWLIB
+      - PRINTF_ALIAS_STANDARD_FUNCTION_NAMES=1
+      - PRINTF_SUPPORT_DECIMAL_SPECIFIERS=0
+      - PRINTF_SUPPORT_EXPONENTIAL_SPECIFIERS=0
+      - PRINTF_SUPPORT_LONG_LONG=0
+    include_dirs:
+      - include
+      - ../loadcore/include
+      - src

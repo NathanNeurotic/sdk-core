@@ -1,0 +1,35 @@
+project: usbhdfsd
+
+targets:
+  - name: usbhdfsd
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/usb_driver.c
+      - src/vfat/fs_driver.c
+      - src/vfat/part_driver.c
+      - src/vfat/fat_driver.c
+      - src/vfat/fat_write.c
+      - src/vfat/scache.c
+      - src/usbhdfsd.c
+      - src/api.c
+    defines:
+      - BUILDING_USBHDFSD
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - src
+      - src/include
+      - src/vfat
+      - src/vfat/include
+      - ../usbd/include
+      - ../cdvd/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../intrman/include
+      - ../sysmem/include
+      - ../iomanx/include
+      - ../threadman/include
+      - ../ioman/include

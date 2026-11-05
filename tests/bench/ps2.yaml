@@ -1,0 +1,10 @@
+project: ee-bench
+
+targets:
+  - name: ee-bench
+    type: ee
+    sources:
+      - src/main.c
+    libs:
+      - kernel
+    opt: -O2

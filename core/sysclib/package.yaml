@@ -1,0 +1,16 @@
+name: sysclib
+origin: ps2sdk
+tier: core
+# Per-subtree licenses:
+#   AFL-2.0            _start.c, nonstd/, exports and imports
+#   MIT                musl/, eyalroz_printf/
+#   APSL-1.1           embeddedartistry_libc/
+#   Newlib-permissive  newlib/
+license: "AFL-2.0 AND MIT AND APSL-1.1 AND Newlib-permissive"
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [loadcore]
+    irx: bin/sysclib.irx

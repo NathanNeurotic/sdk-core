@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_graph core/graph
+ * @brief Graph library
+ */

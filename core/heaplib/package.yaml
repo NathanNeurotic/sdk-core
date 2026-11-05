@@ -1,0 +1,11 @@
+name: heaplib
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [loadcore,sysmem]
+    irx: bin/heaplib.irx

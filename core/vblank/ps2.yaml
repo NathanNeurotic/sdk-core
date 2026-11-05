@@ -1,0 +1,17 @@
+project: vblank
+
+targets:
+  - name: vblank
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/vblank.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    include_dirs:
+      - include
+      - ../loadcore/include
+      - ../intrman/include
+      - ../sysclib/include
+      - ../threadman/include
+      - src

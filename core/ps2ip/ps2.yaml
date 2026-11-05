@@ -1,0 +1,61 @@
+project: ps2ip
+
+targets:
+  - name: ps2ip
+    type: ee_lib
+    sources:
+      - src/ps2ip.c
+      - src/sys_arch.c
+      - src/ps2ip_ps2sdk.c
+      - src/lwip/core/sys.c
+      - src/lwip/core/lwip_init.c
+      - src/lwip/core/mem.c
+      - src/lwip/core/netif.c
+      - src/lwip/core/pbuf.c
+      - src/lwip/core/stats.c
+      - src/lwip/core/tcp_in.c
+      - src/lwip/core/tcp_out.c
+      - src/lwip/core/udp.c
+      - src/lwip/core/memp.c
+      - src/lwip/core/tcp.c
+      - src/lwip/core/raw.c
+      - src/lwip/core/def.c
+      - src/lwip/core/timeouts.c
+      - src/lwip/core/ip.c
+      - src/lwip/core/inet_chksum.c
+      - src/lwip/core/dns.c
+      - src/lwip/core/ipv4/acd.c
+      - src/lwip/core/ipv4/icmp.c
+      - src/lwip/core/ipv4/ip4.c
+      - src/lwip/core/ipv4/ip4_addr.c
+      - src/lwip/core/ipv4/ip4_frag.c
+      - src/lwip/core/ipv4/etharp.c
+      - src/lwip/core/ipv4/dhcp.c
+      - src/lwip/netif/ethernet.c
+      - src/lwip/api/api_lib.c
+      - src/lwip/api/api_msg.c
+      - src/lwip/api/netbuf.c
+      - src/lwip/api/err.c
+      - src/lwip/api/sockets.c
+      - src/lwip/api/tcpip.c
+      - src/lwip/api/netdb.c
+    defines:
+      - LWIP_NOASSERT
+      - LWIP_COMPAT_MUTEX
+      - LWIP_COMPAT_MUTEX_ALLOWED
+      - PS2IP_DHCP
+      - LWIP_DHCP
+      - PS2IP_DNS
+    cflags:
+      - -fno-builtin
+      - -mno-gpopt
+      - -mno-check-zero-division
+      - -ffunction-sections
+    include_dirs:
+      - include
+      - include/arch
+      - include/lwip_include
+      - include/lwip_include/compat/posix
+      - src
+      - ../kernel/include
+      - ../libcglue/include

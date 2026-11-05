@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_libvux core/libvux
+ * @brief VU library functions.
+ */

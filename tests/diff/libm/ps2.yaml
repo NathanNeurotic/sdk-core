@@ -1,0 +1,10 @@
+project: diff-libm
+
+targets:
+  - name: diff-libm
+    type: ee
+    sources:
+      - src/main.c
+    libs:
+      - kernel
+    opt: -O2

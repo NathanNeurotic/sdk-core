@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_libgs core/libgs
+ * @brief GS library functions.
+ */

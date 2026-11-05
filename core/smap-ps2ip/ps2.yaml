@@ -1,0 +1,25 @@
+project: smap-ps2ip
+
+targets:
+  - name: smap-ps2ip
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../smap/src/main.c
+      - ../smap/src/smap.c
+      - ../smap/src/xfer.c
+      - ../smap/src/ipstack.c
+    defines:
+      - BUILDING_SMAP_PS2IP=1
+    imports_lst: ../smap/src/imports.lst
+    include_dirs:
+      - ../smap/include
+      - ../smap/src/include
+      - ../ps2ip-nm/include
+      - ../dmacman/include
+      - ../intrman/include
+      - ../loadcore/include
+      - ../modload/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include

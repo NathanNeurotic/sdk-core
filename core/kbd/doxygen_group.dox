@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_kbd core/kbd
+ * @brief USB Keyboard Driver for PS2
+ */

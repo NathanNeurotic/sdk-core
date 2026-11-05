@@ -1,0 +1,10 @@
+project: fpu-check
+
+targets:
+  - name: fpu-check
+    type: ee
+    sources:
+      - src/main.c
+    libs:
+      - kernel
+    opt: -O2

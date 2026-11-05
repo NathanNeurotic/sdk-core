@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_sysclib core/sysclib
+ * @brief Standard C Library subset.
+ */

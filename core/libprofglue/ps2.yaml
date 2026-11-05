@@ -1,0 +1,11 @@
+project: libprofglue
+
+targets:
+  - name: profglue
+    type: ee_lib
+    sources:
+      - src/prof.c
+      - src/mcount.S
+    include_dirs:
+      - include
+    headers: [kernel]

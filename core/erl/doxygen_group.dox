@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_erl core/erl
+ * @brief The relocatable elf loader/linker.
+ */

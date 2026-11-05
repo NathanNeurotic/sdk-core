@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_libsd core/libsd
+ * @brief LIBSD definitions and imports.
+ */

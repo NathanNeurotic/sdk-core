@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_mpeg core/mpeg
+ * @brief MPEG decoding functions.
+ */

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_font core/font
+ * @brief Font library.
+ */

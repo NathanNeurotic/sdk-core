@@ -1,0 +1,21 @@
+project: udnl
+
+targets:
+  - name: udnl
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/udnl.c
+      - src/udnl_asm.S
+    imports_lst: src/imports.lst
+    include_dirs:
+      - src
+      - src/include
+      - ../dmacman/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

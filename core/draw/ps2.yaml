@@ -1,0 +1,13 @@
+project: draw
+
+targets:
+  - name: draw
+    type: ee_lib
+    sources:
+      - src/draw.c
+      - src/draw2d.c
+      - src/draw3d.c
+      - src/draw_environment.c
+    include_dirs:
+      - include
+    headers: [packet, dma, math3d]

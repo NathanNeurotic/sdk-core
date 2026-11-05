@@ -1,0 +1,10 @@
+project: mc
+
+targets:
+  - name: mc
+    type: ee_lib
+    sources:
+      - src/libmc.c
+    include_dirs:
+      - include
+      - ../kernel/include

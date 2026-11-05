@@ -1,0 +1,9 @@
+project: packet
+
+targets:
+  - name: packet
+    type: ee_lib
+    sources:
+      - src/packet.c
+    include_dirs:
+      - include

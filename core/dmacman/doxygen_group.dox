@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_dmacman core/dmacman
+ * @brief DMACMAN definitions and imports.
+ */

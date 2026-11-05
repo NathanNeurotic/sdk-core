@@ -1,0 +1,15 @@
+project: ps2ips
+
+targets:
+  - name: ps2ips
+    type: ee_lib
+    sources:
+      - src/ps2ipc.c
+      - src/ps2ipc_ps2sdk.c
+    defines:
+      - PS2IP_DNS
+    include_dirs:
+      - include
+      - src
+      - ../kernel/include
+      - ../libcglue/include

@@ -1,0 +1,10 @@
+project: math3d
+
+targets:
+  - name: math3d
+    type: ee_lib
+    sources:
+      - src/math3d.c
+    include_dirs:
+      - include
+      - ../graph/include

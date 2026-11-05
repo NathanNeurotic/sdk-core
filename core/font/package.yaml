@@ -1,0 +1,11 @@
+name: font
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [include]
+    headers: [draw]
+    lib: lib/libfont.a

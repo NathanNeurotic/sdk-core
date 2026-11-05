@@ -1,0 +1,15 @@
+project: elf-loader2
+
+targets:
+  - name: elf-loader2
+    type: ee_lib
+    sources:
+      - src/elf.c
+      - src/elf_loader_compat.c
+      - src/elf_loader_reader.c
+      - src/elf_loader_stdio.c
+      - src/ldrsrc_bin.c
+    include_dirs:
+      - include
+      - src/include
+    headers: [kernel]

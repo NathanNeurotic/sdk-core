@@ -1,0 +1,20 @@
+name: mtapman
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [loadcore,sifman,sifcmd,stdio,threadman,sio2man]
+    irx: bin/mtapman.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/freemtap.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/rmtapman.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/mtapman-2000.irx

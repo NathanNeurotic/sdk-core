@@ -1,0 +1,10 @@
+name: iopmgr
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    irx: bin/iopmgr.irx

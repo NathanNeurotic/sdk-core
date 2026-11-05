@@ -1,0 +1,13 @@
+project: libpthreadglue
+
+targets:
+  - name: pthreadglue
+    type: ee_lib
+    sources:
+      - src/osal.c
+      - src/tls-helper.c
+    cflags:
+      - -ffunction-sections
+    include_dirs:
+      - src/include
+    headers: [kernel]

@@ -1,0 +1,36 @@
+project: hdd-osd
+
+targets:
+  - name: hdd_osd
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../apa/src/hdd_fio.c
+      - ../apa/src/hdd_blkio.c
+      - ../apa/src/hdd.c
+      - ../apa/src/apa.c
+      - ../apa/src/cache.c
+      - ../apa/src/free.c
+      - ../apa/src/journal.c
+      - ../apa/src/misc.c
+      - ../apa/src/password.c
+    imports_lst: ../apa/src/imports.lst
+    defines:
+      - IOMANX_OLD_NAME_COMPATIBILITY=0
+      - IOMANX_OLD_NAME_ADDDELDRV=0
+      - APA_USE_DEV9
+      - APA_USE_ATAD
+      - APA_OSD_VER
+    include_dirs:
+      - ../apa/include
+      - ../apa/src
+      - ../atad/include
+      - ../cdvd/include
+      - ../dev9/include
+      - ../intrman/include
+      - ../iomanx/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

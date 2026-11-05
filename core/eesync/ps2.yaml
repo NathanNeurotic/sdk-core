@@ -1,0 +1,21 @@
+project: eesync
+
+targets:
+  - name: eesync
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/eesync.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    defines:
+      - EESYNC_REGISTER_EXPORTS
+      - EESYNC_CHECK_ILOADP
+    include_dirs:
+      - src
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../sifman/include
+      - ../sysclib/include
+      - ../sysmem/include

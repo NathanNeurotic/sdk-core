@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_kernel core/kernel
+ * @brief EE Kernel prototypes
+ */

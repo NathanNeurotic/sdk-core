@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_filexio core/filexio
+ * @brief fileXio RPC client header file
+ */

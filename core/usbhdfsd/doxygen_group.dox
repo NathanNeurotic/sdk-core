@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_usbhdfsd core/usbhdfsd
+ * @brief IOP USBHDFSD definitions.
+ */

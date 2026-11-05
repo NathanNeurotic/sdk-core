@@ -1,0 +1,29 @@
+project: bdmfs_fatfs
+
+targets:
+  - name: bdmfs_fatfs
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/main.c
+      - src/fs_driver.c
+      - src/fatfs/diskio.c
+      - src/fatfs/ff.c
+      - src/fatfs/ffsystem.c
+      - src/fatfs/ffunicode.c
+    imports_lst: src/imports.lst
+    libs: [gcc]
+    include_dirs:
+      - src
+      - src/include
+      - src/fatfs/include
+      - ../bdm/include
+      - ../cdvd/include
+      - ../loadcore/include
+      - ../iomanx/include
+      - ../threadman/include
+      - ../sysclib/include
+      - ../intrman/include
+      - ../stdio/include
+      - ../ioman/include
+      - ../sysmem/include

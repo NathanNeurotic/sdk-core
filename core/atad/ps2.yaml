@@ -1,0 +1,21 @@
+project: atad
+
+targets:
+  - name: atad
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/ps2atad.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    defines:
+      - ATA_GAMESTAR_WORKAROUND=1
+      - ATA_USE_DEV9=1
+    include_dirs:
+      - include
+      - src
+      - ../dev9/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include

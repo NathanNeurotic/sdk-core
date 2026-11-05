@@ -1,0 +1,23 @@
+project: udnl-t300
+
+targets:
+  - name: udnl_t300
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../udnl/src/udnl.c
+      - ../udnl/src/udnl_asm.S
+    imports_lst: ../udnl/src/imports.lst
+    defines:
+      - UDNL_T300
+    include_dirs:
+      - ../udnl/src
+      - ../udnl/src/include
+      - ../dmacman/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

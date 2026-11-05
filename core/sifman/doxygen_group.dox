@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_sifman core/sifman
+ * @brief Low-level SIF DMA.
+ */

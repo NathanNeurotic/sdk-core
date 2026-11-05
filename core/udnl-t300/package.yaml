@@ -1,0 +1,9 @@
+name: udnl-t300
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    irx: bin/udnl-t300.irx

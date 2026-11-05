@@ -1,0 +1,32 @@
+project: ps2cam
+
+targets:
+  - name: ps2cam
+    type: ee_lib
+    sources:
+      - src/ps2cam_rpc.c
+    include_dirs:
+      - include
+      - ../kernel/include
+
+  - name: ps2camdrv
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/iop/ps2cam.c
+    imports_lst: src/iop/imports.lst
+    include_dirs:
+      - include/iop
+      - src/iop
+      - ../libsd/include
+      - ../dmacman/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../sifcmd/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include
+      - ../vblank/include
+      - ../usbd/include

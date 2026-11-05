@@ -1,0 +1,27 @@
+project: sior
+
+targets:
+  - name: sior
+    type: ee_lib
+    sources:
+      - src/ee/sior_rpc.c
+    include_dirs:
+      - include
+      - ../kernel/include
+
+  - name: siordrv
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/iop/sior.c
+      - src/iop/xprintf.c
+    imports_lst: src/iop/imports.lst
+    exports_tab: src/iop/exports.tab
+    include_dirs:
+      - include
+      - ../loadcore/include
+      - ../sifcmd/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../threadman/include
+      - src/iop

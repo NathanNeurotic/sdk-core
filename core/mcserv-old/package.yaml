@@ -1,0 +1,12 @@
+name: mcserv-old
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    irx: bin/mcserv-old.irx
+  - kind: driver
+    target: [iop]
+    irx: bin/mcserv-1300.irx

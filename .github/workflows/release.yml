@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  release:
+    if: false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ps2build/setup-sdk@master
+        with:
+          ps2dev: /opt/ps2dev
+          components: toolchain,tools,ninja,llvm-toolchain
+
+      - name: Install core/common
+        run: |
+          mkdir -p /opt/ps2dev/packages/core /opt/ps2dev/packages-llvm/core
+          cp -a core/common /opt/ps2dev/packages/core/common
+          cp -a core/common /opt/ps2dev/packages-llvm/core/common
+
+      - name: Build and install
+        run: ps2build install -c ps2workspace.yaml --packages /opt/ps2dev/packages
+
+      - name: Build and install with LLVM
+        run: |
+          ps2build install \
+            -c ps2workspace.yaml \
+            -o build-llvm \
+            --toolchain llvm \
+            --packages /opt/ps2dev/packages-llvm
+
+      - name: Collect licenses
+        run: |
+          mkdir -p /opt/ps2dev/licenses/core
+          cp LICENSE /opt/ps2dev/licenses/core/LICENSE
+
+      - name: Package
+        run: |
+          (cd /opt/ps2dev && \
+            zip -r "$GITHUB_WORKSPACE/sdk-core-${GITHUB_REF_NAME}-gcc.zip" packages licenses/core && \
+            zip -r "$GITHUB_WORKSPACE/sdk-core-${GITHUB_REF_NAME}-llvm.zip" packages-llvm)
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: sdk-core-*.zip

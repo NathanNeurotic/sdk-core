@@ -1,0 +1,34 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ps2build/setup-sdk@master
+        with:
+          ps2dev: /opt/ps2dev
+          components: toolchain,tools,ninja,llvm-toolchain
+
+      - name: Install core/common
+        run: |
+          mkdir -p /opt/ps2dev/packages/core /opt/ps2dev/packages-llvm/core
+          cp -a core/common /opt/ps2dev/packages/core/common
+          cp -a core/common /opt/ps2dev/packages-llvm/core/common
+
+      - name: Build and install
+        run: ps2build install -c ps2workspace.yaml --packages /opt/ps2dev/packages
+
+      - name: Build and install with LLVM
+        run: |
+          ps2build install \
+            -c ps2workspace.yaml \
+            -o build-llvm \
+            --toolchain llvm \
+            --packages /opt/ps2dev/packages-llvm

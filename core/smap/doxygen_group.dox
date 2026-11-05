@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_smap core/smap
+ * @brief DEV9 Device Driver definitions and imports.
+ */

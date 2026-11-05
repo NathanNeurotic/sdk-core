@@ -1,0 +1,37 @@
+project: fs-osd
+
+targets:
+  - name: fs_osd
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../fs/src/pfs.c
+      - ../fs/src/pfs_fio.c
+      - ../fs/src/pfs_fioctl.c
+      - ../fs/src/bitmap.c
+      - ../fs/src/dir.c
+      - ../fs/src/inode.c
+      - ../fs/src/journal.c
+      - ../fs/src/misc.c
+      - ../fs/src/super.c
+      - ../fs/src/superWrite.c
+      - ../fs/src/cache.c
+      - ../fs/src/block.c
+      - ../fs/src/blockWrite.c
+    imports_lst: ../fs/src/imports.lst
+    libs: [gcc]
+    defines:
+      - IOMANX_OLD_NAME_COMPATIBILITY=0
+      - IOMANX_OLD_NAME_ADDDELDRV=0
+      - PFS_OSD_VER
+    include_dirs:
+      - ../fs/include
+      - ../fs/src
+      - ../cdvd/include
+      - ../intrman/include
+      - ../iomanx/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

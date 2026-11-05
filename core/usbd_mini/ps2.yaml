@@ -1,0 +1,34 @@
+project: usbd_mini
+
+targets:
+  - name: usbd_mini
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../usbd/src/hub.c
+      - ../usbd/src/mem.c
+      - ../usbd/src/timer.c
+      - ../usbd/src/endpoint.c
+      - ../usbd/src/io_request.c
+      - ../usbd/src/hub_resets.c
+      - ../usbd/src/td_queue.c
+      - ../usbd/src/hcd.c
+      - ../usbd/src/usbd_sys.c
+      - ../usbd/src/usbd_api.c
+      - ../usbd/src/usbd_main.c
+      - ../usbd/src/report_descriptor_init.c
+      - ../usbd/src/device_driver.c
+      - ../usbd/src/device.c
+    imports_lst: ../usbd/src/imports.lst
+    exports_tab: ../usbd/src/exports.tab
+    defines:
+      - MINI_DRIVER
+    include_dirs:
+      - ../usbd/include
+      - ../usbd/src
+      - ../loadcore/include
+      - ../intrman/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

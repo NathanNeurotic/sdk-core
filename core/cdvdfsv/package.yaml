@@ -1,0 +1,11 @@
+name: cdvdfsv
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    include_dirs: [include]
+    headers: [cdvd,dmacman,intrman,iomanx,loadcore,sifcmd,sifman,stdio,sysclib,sysmem,threadman]
+    irx: bin/cdvdfsv.irx

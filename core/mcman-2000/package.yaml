@@ -1,0 +1,9 @@
+name: mcman-2000
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: driver
+    target: [iop]
+    irx: bin/mcman-2000.irx

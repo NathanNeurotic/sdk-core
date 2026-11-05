@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_padman core/padman
+ * @brief Extended pad functions
+ */

@@ -1,0 +1,9 @@
+name: pthreadglue
+origin: ps2sdk
+tier: core
+license: AFL-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    lib: lib/libpthreadglue.a

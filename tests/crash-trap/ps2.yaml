@@ -1,0 +1,11 @@
+project: crash-trap
+
+targets:
+  - name: crash-trap
+    type: ee
+    debug: true
+    sources:
+      - src/main.c
+    libs:
+      - crashscreen
+      - kernel

@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_ioprpgen core/ioprpgen
+ * @brief Definitions for IOPRP generation library.
+ */

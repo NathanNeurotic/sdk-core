@@ -1,0 +1,15 @@
+# The decimal float literals in the libm sources round differently: GCC rounds them toward zero (0.1f is 0x3dcccccc), LLVM to nearest (0x3dcccccd). Accepted 2026-10-04.
+m_sinf
+m_cosf
+m_tanf
+m_asinf
+m_acosf
+m_atanf
+m_expf
+m_exp2f
+m_log2f
+m_log10f
+m_coshf
+m_cbrtf
+m_powf
+m_atan2f

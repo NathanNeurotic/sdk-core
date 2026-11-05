@@ -1,0 +1,11 @@
+project: cxx-exceptions
+
+targets:
+  - name: cxx-exceptions
+    type: ee
+    sources:
+      - src/main.cpp
+    libs:
+      - kernel
+    cflags:
+      - -std=c++20

@@ -1,0 +1,31 @@
+project: iLinkman
+
+targets:
+  - name: iLinkman
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - src/iLink.c
+      - src/iLink_PHY.c
+      - src/iLink_internal.c
+      - src/iLink_crom.c
+      - src/iLink_intr.c
+      - src/iLink_TxRx.c
+      - src/iLink_DMA.c
+    imports_lst: src/imports.lst
+    exports_tab: src/exports.tab
+    cflags:
+      - -mno-check-zero-division
+    include_dirs:
+      - include
+      - src
+      - src/include
+      - ../cdvd/include
+      - ../dmacman/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include

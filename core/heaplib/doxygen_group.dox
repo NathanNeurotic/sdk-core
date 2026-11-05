@@ -1,0 +1,4 @@
+/**
+ * @defgroup core_heaplib core/heaplib
+ * @brief Heap library.
+ */

@@ -1,0 +1,30 @@
+project: IEEE1394_bd_mini
+
+targets:
+  - name: IEEE1394_bd_mini
+    type: iop
+    linkfile: ../startup/share/iop/linkfile
+    sources:
+      - ../IEEE1394_bd/src/sbp2_driver.c
+      - ../IEEE1394_bd/src/main.c
+      - ../IEEE1394_bd/src/scsi.c
+    imports_lst: ../IEEE1394_bd/src/imports.lst
+    libs: [gcc]
+    defines:
+      - MINI_DRIVER
+    cflags:
+      - -mno-check-zero-division
+    include_dirs:
+      - ../IEEE1394_bd/src
+      - ../IEEE1394_bd/src/include
+      - ../bdm/include
+      - ../cdvd/include
+      - ../iLinkman/include
+      - ../intrman/include
+      - ../ioman/include
+      - ../loadcore/include
+      - ../sifcmd/include
+      - ../stdio/include
+      - ../sysclib/include
+      - ../sysmem/include
+      - ../threadman/include
