@@ -42,3 +42,7 @@ targets:
     headers: [cdvd]
     cflags:
       - -ffunction-sections
+      # Keep clang from unrolling loops at -O2: it adds about 2.2 KB to the
+      # library, which programs confined to a small fixed region (resident
+      # in-game loaders) cannot spare. GCC output is unchanged.
+      - -fno-unroll-loops
